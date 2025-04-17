@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+<h1 class="text-center mb-4">Result</h1>
+<div class="alert alert-success">
+    Correct Answers: <span th:text="${correct}"></span>
+</div>
+<div class="alert alert-danger">
+    Incorrect Answers: <span th:text="${incorrect}"></span>
+</div>
+<a href="/" class="btn btn-primary">Take Quiz Again</a>
+</body>
+</html>

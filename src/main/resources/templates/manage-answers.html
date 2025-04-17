@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage Answers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-5">
+<h1 class="text-center mb-4">Manage Answers</h1>
+<h2>Question: <span th:text="${question.questionText}"></span></h2>
+
+<h3 class="mt-4">Existing Answers</h3>
+<ul class="list-group mb-4">
+    <li th:each="answer : ${question.answers}" class="list-group-item">
+        <span th:text="${answer.answerText}"></span> -
+        <span class="badge" th:classappend="${answer.isCorrect ? 'bg-success' : 'bg-danger'}" th:text="${answer.isCorrect ? 'Correct' : 'Incorrect'}"></span>
+    </li>
+</ul>
+
+<h3>Add New Answer</h3>
+<form th:action="@{/admin/{questionId}/answers/add(questionId=${question.id})}" th:object="${newAnswer}" method="post">
+    <div class="mb-3">
+        <label for="answerText" class="form-label">Answer Text:</label>
+        <input type="text" id="answerText" th:field="*{answerText}" class="form-control" />
+    </div>
+    <div class="form-check mb-3">
+        <input type="checkbox" id="isCorrect" th:field="*{isCorrect}" class="form-check-input" />
+        <label for="isCorrect" class="form-check-label">Is Correct</label>
+    </div>
+    <button type="submit" class="btn btn-success">Add Answer</button>
+</form>
+
+<a href="/admin" class="btn btn-secondary mt-4">Back to Admin</a>
+</body>
+</html>
