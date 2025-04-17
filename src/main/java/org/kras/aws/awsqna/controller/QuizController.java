@@ -31,23 +31,30 @@ public class QuizController {
     }
 
     @PostMapping("/submit")
-    public String submitAnswers(@RequestParam("answers") List<Long> selectedAnswerIds, Model model) {
+    public String submitAnswers(@RequestParam(value = "answers", required = false) List<Long> selectedAnswerIds, Model model) {
         int correct = 0;
-        int incorrect = 0;
-
-        for (Question question : quizService.getAllQuestions()) {
-            for (Answer answer : question.getAnswers()) {
-                if (selectedAnswerIds.contains(answer.getId()) && answer.getIsCorrect()) {
-                    correct++;
-                } else if (selectedAnswerIds.contains(answer.getId()) && !answer.getIsCorrect()) {
-                    incorrect++;
+        List<Question> allQuestions = quizService.getAllQuestions();
+        int incorrect = allQuestions.size();
+        if (selectedAnswerIds == null || selectedAnswerIds.isEmpty()) {
+            fillModel(model, correct, incorrect, incorrect);
+        } else {
+            for (Question question : allQuestions) {
+                for (Answer answer : question.getAnswers()) {
+                    if (selectedAnswerIds.contains(answer.getId()) && answer.getIsCorrect()) {
+                        correct++;
+                        incorrect--;
+                    }
                 }
             }
         }
+        fillModel(model, correct, incorrect, allQuestions.size());
+        return "result";
+    }
 
+    private void fillModel(final Model model, int correct, int incorrect, int allQuestionsSize) {
         model.addAttribute("correct", correct);
         model.addAttribute("incorrect", incorrect);
-        return "result";
+        model.addAttribute("grade", String.valueOf(Math.round((double) correct / allQuestionsSize * 100)));
     }
 
     @GetMapping("/admin")
