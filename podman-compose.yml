@@ -13,19 +13,19 @@ services:
     ports:
       - "3306:3306"
 
-#  springboot-app:
-#    image: quizapp:latest
-#    container_name: springboot-container
-#    restart: always
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/quizdb
-#      SPRING_DATASOURCE_USERNAME: quizuser
-#      SPRING_DATASOURCE_PASSWORD: quizpassword
-#      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
-#    ports:
-#      - "8080:8080"
-#    depends_on:
-#      - mysql
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: quizapp:latest
+    container_name: springboot-container
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/quizdb
+      SPRING_DATASOURCE_USERNAME: quizuser
+      SPRING_DATASOURCE_PASSWORD: quizpassword
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql

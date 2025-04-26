@@ -4,9 +4,10 @@ package org.kras.aws.awsqna.service;
 import lombok.RequiredArgsConstructor;
 import org.kras.aws.awsqna.entity.Answer;
 import org.kras.aws.awsqna.entity.Question;
-import org.springframework.stereotype.Component;
 import org.kras.aws.awsqna.repo.QuestionRepository;
+import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -16,7 +17,7 @@ public class QuizService {
     private final QuestionRepository questionRepository;
 
     public List<Question> getAllQuestions() {
-        return questionRepository.findAll();
+        return getRamdomQuestions(questionRepository.findAll());
     }
 
 
@@ -36,5 +37,10 @@ public class QuizService {
         newAnswer.setQuestion(question);
         question.getAnswers().add(newAnswer);
         questionRepository.save(question);
+    }
+
+    private List<Question> getRamdomQuestions(List<Question> questions) {
+        Collections.shuffle(questions);
+        return questions.subList(0, Math.min(questions.size(), 20));
     }
 }
