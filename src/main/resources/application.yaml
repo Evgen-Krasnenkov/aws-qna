@@ -26,4 +26,10 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
 
-questions.load: false
+questions:
+  list:
+    - deployment.json
+    - development.json
+    - examOne.json
+    - security.json
+    - troubleshooting.json

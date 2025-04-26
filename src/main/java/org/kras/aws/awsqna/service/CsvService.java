@@ -24,7 +24,7 @@ public class CsvService {
 
     private final QuestionService questionService;
 
-    @PostConstruct
+//    @PostConstruct
     public void loadCsvFromResources() {
         try {
             ClassPathResource resource = new ClassPathResource("questions.csv");

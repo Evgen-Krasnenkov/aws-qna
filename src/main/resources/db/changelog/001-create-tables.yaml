@@ -22,6 +22,11 @@ databaseChangeLog:
                   type: LONGTEXT
                   constraints:
                     nullable: false
+              - column:
+                  name: question_hint
+                  type: LONGTEXT
+                  constraints:
+                    nullable: false
 
   - changeSet:
       id: 002-create-answer-table
@@ -43,7 +48,7 @@ databaseChangeLog:
                     primaryKey: true
               - column:
                   name: answer_text
-                  type: VARCHAR(255)
+                  type: LONGTEXT
                   constraints:
                     nullable: false
               - column:

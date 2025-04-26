@@ -7,13 +7,38 @@
 <body class="container py-5">
 <h1 class="text-center mb-4">Quiz</h1>
 <form th:action="@{/submit}" method="post">
-    <div th:each="question : ${questions}" class="mb-4">
-        <p class="fw-bold" th:text="${question.questionText}"></p>
-        <div th:each="answer : ${question.answers}" class="form-check">
-            <input type="checkbox" class="form-check-input" th:name="answers" th:value="${answer.id}" id="answer-${answer.id}" />
-            <label class="form-check-label" th:for="|answer-${answer.id}|" th:text="${answer.answerText}"></label>
-        </div>
-    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Question</th>
+            <th>Answers</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="question, iterStat : ${questions}">
+            <td th:text="${iterStat.count}"></td>
+            <td>
+                <div th:utext="${question.questionText}" class="fw-bold mb-2"></div>
+                <details>
+                    <summary style="cursor: pointer; color: #0d6efd; text-decoration: underline;">HINT</summary>
+                    <div th:utext="${question.questionHint}" class="mt-2"></div>
+                </details>
+            </td>
+            <td>
+                <div th:each="answer : ${question.answers}" class="form-check">
+                    <input type="checkbox"
+                           class="form-check-input"
+                           th:name="answers"
+                           th:value="${answer.id}"
+                           id="answer-${answer.id}" />
+                    <label class="form-check-label" th:for="|answer-${answer.id}|" th:utext="${answer.answerText}"></label>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </body>

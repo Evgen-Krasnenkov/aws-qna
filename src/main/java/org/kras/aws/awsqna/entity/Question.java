@@ -21,7 +21,8 @@ public class Question {
 
     @Lob
     private String questionText;
-
+    @Lob
+    private String questionHint;
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Answer> answers = new ArrayList<>();
 
@@ -47,5 +48,13 @@ public class Question {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public String getQuestionHint() {
+        return questionHint;
+    }
+
+    public void setQuestionHint(String questionHint) {
+        this.questionHint = questionHint;
     }
 }

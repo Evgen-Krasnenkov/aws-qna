@@ -1,0 +1,1926 @@
+[
+  {
+    "answerId": 38589440,
+    "question": "AWS SAM",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>For serverless applications (also referred to as Lambda-based applications), the optional&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Transform</strong></b><span>&nbsp;section specifies the version of the AWS Serverless Application Model (AWS SAM) to use. When you specify a transform, you can use AWS SAM syntax to declare resources in your template. The model defines the syntax that you can use and how it is processed.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>&nbsp;This&nbsp;section specifies one or more macros that AWS CloudFormation uses to process your template. The Transform section builds on the simple, declarative language of AWS CloudFormation with a powerful macro system.</span><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(1).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can declare one or more macros within a template. AWS CloudFormation executes macros in the order that they are specified. When you create a change set, AWS CloudFormation generates a change set that includes the processed template content. You can then review the changes and execute the change set.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>AWS CloudFormation also supports the AWS::Serverless and AWS::Include transforms, which are macros hosted by AWS CloudFormation. AWS CloudFormation treats these transforms the same as any macros you create in terms of execution order and scope.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Therefore, the&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Transform</strong></b><span>&nbsp;section should be the correct one to be added to your template.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Mappings</strong></b><span>&nbsp;section is incorrect because&nbsp;this is just a literal&nbsp;mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Parameters</strong></b><span>&nbsp;section is incorrect because this only contains the values that will be passed to your template at runtime (when you create or update a stack). You can refer to parameters from the Resources and Outputs sections of the template, but this is not used to specify the AWS SAM version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Format Version</strong></b><span>&nbsp;section is incorrect because this just refers to the AWS CloudFormation template version that the template conforms to, and not&nbsp;the version of the AWS Serverless Application Model (AWS SAM)</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://aws.amazon.com/blogs/aws/cloudformation-macros/\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://aws.amazon.com/blogs/aws/cloudformation-macros/</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533657,
+        "value": "Mappings",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533658,
+        "value": "Transform",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533659,
+        "value": "Parameters",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533660,
+        "value": "Format Version",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 0,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533658,
+        "questionId": 382481,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382481,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You are deploying a serverless application composed of Lambda, API Gateway, CloudFront, and DynamoDB using CloudFormation. The AWS SAM syntax should be used to declare resources in your template which requires you to specify the version of the AWS Serverless Application Model (AWS SAM).</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following sections is required, aside from the&nbsp;Resources&nbsp;section, that should be in your CloudFormation template?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589441,
+    "question": "ECS Cluster",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">task placement strategy</strong></b><span>&nbsp;is an algorithm for selecting instances for task placement or tasks for termination. Task placement strategies can be specified when either running a task or creating a new service.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Amazon ECS supports the following task placement strategies:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">binpack</strong></b><span>&nbsp;– Place tasks based on the least available amount of CPU or memory. This minimizes the number of instances in use.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">random</strong></b><span>&nbsp;– Place tasks randomly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">spread</strong></b><span>&nbsp;– Place tasks evenly based on the specified value. Accepted values are attribute key-value pairs,&nbsp;</span><i><em class=\"Editor__editor-text-italic___C9n8O\">instanceId</em></i><span>, or&nbsp;</span><i><em class=\"Editor__editor-text-italic___C9n8O\">host</em></i><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The scenario states that the developer must select a task placement strategy which will place tasks based on the least available amount of CPU or memory. By using bin pack strategy with CPU as the field parameter, ECS is able to place tasks onto an instance with the least available amount of CPU first, before moving on to the other instances. Hence, the correct answer is to use the&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">binpack</strong></b><span>&nbsp;task placement strategy.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">random</strong></b><span>&nbsp;is incorrect&nbsp;because this will place the tasks randomly, rather than placing the tasks to the instances based on the least available amount of CPU or memory.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">spread</strong></b><span>&nbsp;is incorrect because this will place tasks evenly to the instances based on a specified value.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">distinctInstance</strong></b><span>&nbsp;is incorrect because this is not a valid task placement strategy, but a&nbsp;task placement constraint.&nbsp;This is primarily used as a constraint to place each task on a different container instance. It can be specified when either running a task or creating a new service.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://aws.amazon.com/blogs/compute/amazon-ecs-task-placement/\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://aws.amazon.com/blogs/compute/amazon-ecs-task-placement/</span></a></p>",
+    "choices": [
+      {
+        "id": 1533661,
+        "value": "binpack",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533662,
+        "value": "random",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533663,
+        "value": "distinctInstance",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533664,
+        "value": "spread",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 1,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533661,
+        "questionId": 382482,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382482,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer is building an e-commerce application which will be hosted in an ECS Cluster. To minimize the number of instances in use, she must select a strategy which will place tasks based on the least available amount of CPU or memory.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following task placement strategy should the developer implement?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589442,
+    "question": "SAM",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS SAM</strong></b><span>&nbsp;uses AWS CloudFormation as the underlying deployment mechanism.&nbsp;You can deploy your application by using AWS SAM command line interface (CLI) commands. You can also use other AWS services that integrate with AWS SAM to automate your deployments.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>&nbsp;When deploying a SAM application, it’s vital to ensure that all components of the application are properly packaged and that all resources are provisioned correctly in the AWS environment. The&nbsp;sam build&nbsp;command serves this purpose by resolving any dependencies the application might have and constructing deployment artifacts for all functions and layers specified in the SAM template. This is especially important when the SAM template references local file paths, such as&nbsp;CodeUri&nbsp;pointing to local Lambda function codes.</span><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(2).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Once the application has been successfully built, the next step is to deploy it. The&nbsp;sam deploy&nbsp;command allows the application to be deployed using AWS CloudFormation, ensuring that all resources defined in the SAM template are provisioned and configured correctly in the target environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answers are:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">– Execute&nbsp;sam build&nbsp;to resolve dependencies and construct deployment artifacts for all functions and layers in the SAM template.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">– Use the&nbsp;sam deploy&nbsp;command to deploy the application with a specified CloudFormation stack.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;Run&nbsp;sam init&nbsp;to initialize a new SAM project&nbsp;</strong></b><span>is incorrect because this command is simply used when creating&nbsp;a new SAM project, not to deploy an existing one.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;Execute&nbsp;sam publish&nbsp;to make the application available in the AWS Serverless Application Repository&nbsp;</strong></b><span>is incorrect. This&nbsp;SAM CLI is used to publish applications to the AWS Serverless Application Repository, which is not a mandatory step for deploying SAM applications.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Use the&nbsp;sam sync&nbsp;command to synchronize the local changes to the application in AWS&nbsp;</strong></b><span>is incorrect. This command is typically used for quick syncing of local changes to AWS and is more suitable for rapid development testing. In a Production setting, a full deployment using&nbsp;sam deploy&nbsp;is more appropriate to ensure that all configurations and resources are correctly provisioned.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-deploying.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-deploying.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533665,
+        "value": "Run sam init to initialize a new SAM project.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533666,
+        "value": "Execute sam build to resolve dependencies and construct deployment artifacts for all functions and layers in the SAM template.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533667,
+        "value": "Use the sam deploy command to deploy the application with a specified CloudFormation stack.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533668,
+        "value": "Execute sam publish to make the application available in the AWS Serverless Application Repository.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533669,
+        "value": "Use thesam sync command to synchronize the local changes to the application in AWS.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 2,
+    "type": "MULTIPLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533667,
+        "questionId": 382483,
+        "response": null,
+        "answerFeedback": null
+      },
+      {
+        "isCorrect": true,
+        "choiceId": 1533666,
+        "questionId": 382483,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382483,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A development team is working on an AWS Serverless Application Model (SAM) application with its source code hosted on GitHub. A newly recruited developer clones the repository and observes that the SAM template contains references to AWS Lambda functions with&nbsp;CodeUri&nbsp;pointing to local file paths. The developer has added a new Lambda function and must redeploy the updated version to Production.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which combination of steps must be taken to satisfy the requirement? (Select Two)</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589443,
+    "question": "EBS volume",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can detach an Amazon EBS volume from an instance explicitly or by terminating the instance. However, if the instance is running, you must first unmount the volume from the instance.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If an EBS volume is the root device of an instance, you must&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">stop the instance before you can detach the volume.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The options that say&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">unmount the volume from the OS and then detach</strong></b><span>&nbsp;and&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">unmount the volume, stop the instance, and then detach</strong></b><span>&nbsp;are both incorrect because you can’t unmount the root volume on a running instance.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Detach the volume from the AWS Console. AWS takes care of unmounting the volume for you</strong></b><span>&nbsp;is incorrect because unmounting the volume is not managed by AWS.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Reference:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533670,
+        "value": "Detach the volume from the AWS Console. AWS takes care of unmounting the volume for you.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533671,
+        "value": "Unmount the volume from the OS and then detach.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533672,
+        "value": "Unmount the volume, stop the instance, and then detach.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533673,
+        "value": "Stop the instance then detach the volume.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 3,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533673,
+        "questionId": 382484,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382484,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An EBS-backed EC2 instance has been recently reported to contain a malware that could spread to your other instances. To fix this security vulnerability, you will need to attach its root EBS volume to a new EC2 instance which hosts a security program that can scan viruses, worms, Trojan horses, or spyware.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>What steps would you take to detach the root volume from the compromised EC2 instance?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589444,
+    "question": "Docker container ",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>In&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">ElasticBeanstalk</strong></b><span>, you can choose from a variety of deployment methods:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">All at once</strong></b><span>&nbsp;– Deploy the new version to all instances simultaneously. All instances in your environment are out of service for a short time while the deployment occurs.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling</strong></b><span>&nbsp;– Deploy the new version in batches. Each batch is taken out of service during the deployment phase, reducing your environment’s capacity by the number of instances in a batch.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch</strong></b><span>&nbsp;– Deploy the new version in batches, but first launch a new batch of instances to ensure full capacity during the deployment process.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Immutable</strong></b><span>&nbsp;– Deploy the new version to a fresh group of instances by performing an&nbsp;immutable update.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/Green</strong></b><span>&nbsp;– Deploy the new version to a separate environment, and then swap CNAMEs of the two environments to redirect traffic to the new version instantly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>&nbsp;To maintain full capacity during deployments, you can configure your environment to launch a new batch of instances before taking any instances out of service. This option is known as a&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">rolling deployment with an additional batch</strong></b><span>. When the deployment completes, Elastic Beanstalk terminates the additional batch of instances.</span><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(3).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Immutable environment updates are an alternative to&nbsp;rolling updates. Immutable environment updates ensure that configuration changes that require replacing instances are applied efficiently and safely. If an immutable environment update fails, the rollback process requires only terminating an Auto Scaling group. A failed rolling update, on the other hand, requires performing an additional rolling update to roll back the changes.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>To perform an immutable environment update, Elastic Beanstalk creates a second, temporary Auto Scaling group behind your environment’s load balancer to contain the new instances. First, Elastic Beanstalk launches a single instance with the new configuration in the new group. This instance serves traffic alongside all of the instances in the original Auto Scaling group that are running the previous configuration.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence,&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Immutable</strong></b><span>&nbsp;and&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch</strong></b><span>&nbsp;are the correct deployment methods to be used in this scenario.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">All at once</strong></b><span>&nbsp;is incorrect because this will deploy the new version to all existing instances immediately and will not create new EC2 instances. Hence, it is possible that there would be a degradation of the service since some instances would be unavailable during the deployment process.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling</strong></b><span>&nbsp;is incorrect because this will deploy the new version in batches only to existing instances, without provisioning new resources. The compute capacity of the environment would still be compromised in this method.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Canary&nbsp;</strong></b><span>is incorrect because this type of deployment method is not readily available in Elastic Beanstalk, but primarily to Lambda.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html</span></a></p>",
+    "choices": [
+      {
+        "id": 1533674,
+        "value": "All at once",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533675,
+        "value": "Rolling with additional batch",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533676,
+        "value": "Immutable",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533677,
+        "value": "Rolling",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533678,
+        "value": "Canary",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 4,
+    "type": "MULTIPLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533675,
+        "questionId": 382485,
+        "response": null,
+        "answerFeedback": null
+      },
+      {
+        "isCorrect": true,
+        "choiceId": 1533676,
+        "questionId": 382485,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382485,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A single docker container environment is hosted in Elastic Beanstalk. Your manager instructed you to ensure that the compute resources maintain full capacity during deployments to avoid any degradation of the service or possible down time.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following deployment methods should you use to satisfy the given requirement? (Select TWO.)</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589445,
+    "question": " AWS CLI ",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>To create a Lambda function, you need a deployment package and an execution role. The deployment package contains your function code. The execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request tracing. You can use the&nbsp;CreateFunction API via the AWS CLI or the AWS SDK of your choice.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A function has an unpublished version, and can have published versions and aliases. The unpublished version changes when you update your function’s code and configuration. A published version is a snapshot of your function code and configuration that can’t be changed. An alias is a named resource that maps to a version, and can be changed to map to a different version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;InvalidParameterValueException&nbsp;will be returned if one of the parameters in the request is invalid. For example, if&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">you provided an IAM role in the&nbsp;CreateFunction&nbsp;API which AWS Lambda is unable to assume</strong></b><span>. Hence, this option is the most likely cause of the issue in this scenario.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If&nbsp;</span><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">y</strong></b></i><b><strong class=\"Editor__editor-text-bold___25KrR\">ou have exceeded your maximum total code size per account</strong></b><span>, the&nbsp;CodeStorageExceededException&nbsp;will be returned, which is why this option is incorrect.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">the resource already exists</strong></b><span>,&nbsp;the&nbsp;ResourceConflictException&nbsp;will be returned and not&nbsp;InvalidParameterValueException. Therefore, this option is also incorrect.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">the&nbsp;AWS Lambda service encountered an internal error</strong></b><span>,&nbsp;the&nbsp;ServiceException&nbsp;will be returned hence, this option is incorrect.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533679,
+        "value": "You have exceeded your maximum total code size per account.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533680,
+        "value": "The AWS Lambda service encountered an internal error.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533681,
+        "value": "The resource already exists.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533682,
+        "value": "You provided an IAM role in the CreateFunction API which AWS Lambda is unable to assume.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 5,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533682,
+        "questionId": 382486,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382486,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You developed a shell script which uses AWS CLI to create a new Lambda function. However, you received an&nbsp;InvalidParameterValueException&nbsp;after running the script.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>What is the MOST likely cause of this issue?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589446,
+    "question": "AWS Elastic Beanstalk",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Standard generic and preconfigured Docker platforms on Elastic Beanstalk support only a single Docker container per Elastic Beanstalk environment. In order to get the most out of Docker, Elastic Beanstalk lets you create an environment where your Amazon EC2 instances run multiple Docker containers side by side.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The following diagram shows an example Elastic Beanstalk environment configured with three Docker containers running on each Amazon EC2 instance in an Auto Scaling group:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>&nbsp;Container instances—Amazon EC2 instances running Multicontainer Docker in an Elastic Beanstalk environment—require a configuration file named&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Dockerrun.aws.json.</strong></b><span>&nbsp;This file is specific to Elastic Beanstalk and can be used alone or combined with source code and content in a&nbsp;source bundle&nbsp;to create an environment on a Docker platform.</span><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(7).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Configure the container definitions in the&nbsp;Dockerrun.aws.json&nbsp;file.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Configure the container definitions in the Amazon ECS Console when building the Docker environment&nbsp;</strong></b><span>is incorrect because the application must be deployed using Elastic Beanstalk. Therefore, you must configure the container definitions in the&nbsp;Dockerrun.aws.json&nbsp;file.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Configure the container definitions in the&nbsp;Dockerrun.aws.json.config&nbsp;and put it inside the&nbsp;.ebextensions&nbsp;folder&nbsp;</strong></b><span>is incorrect because the&nbsp;Dockerrun.aws.json&nbsp;file should be placed on the same level where your application file resides.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Use the&nbsp;eb config&nbsp;command to configure the container definitions&nbsp;</strong></b><span>is incorrect. This is just a command that you can use to change the configuration settings of your environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecstutorial.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecstutorial.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecs.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker_ecs.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533683,
+        "value": "Configure the container definitions in the Dockerrun.aws.json file.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533684,
+        "value": "Configure the container definitions in the Amazon ECS Console when building the Docker environment.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533685,
+        "value": "Configure the container definitions in the Dockerrun.aws.json.config and put it inside the .ebextensions folder.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533686,
+        "value": "Use the eb config command to configure the container definitions.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 6,
+    "type": "SINGLE",
+    "userAnswers": [],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382487,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer plans to use AWS Elastic Beanstalk to deploy a microservice application. The application will be implemented in a multi-container Docker environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>How should the developer configure the container definitions in the environment?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589447,
+    "question": " CodeDeploy",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy can deploy application content that runs on a server and is stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. CodeDeploy can also deploy a serverless Lambda function. You do not need to make changes to your existing code before you can use CodeDeploy.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>&nbsp;CodeDeploy provides two deployment type options:</span><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(8).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">In-place deployment</strong></b><span>: The application on each instance in the deployment group is stopped, the latest application revision is installed, and the new version of the application is started and validated. You can use a load balancer so that each instance is deregistered during its deployment and then restored to service after the deployment is complete. Only deployments that use the EC2/On-Premises compute platform can use in-place deployments. AWS Lambda compute platform deployments cannot use an in-place deployment type.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/green deployment</strong></b><span>: The behavior of your deployment depends on which compute platform you use:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an EC2/On-Premises compute platform:</strong></b></u><span>&nbsp;The instances in a deployment group (the original environment) are replaced by a different set of instances (the replacement environment). If you use an EC2/On-Premises compute platform, be aware that blue/green deployments work with Amazon EC2 instances only.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an AWS Lambda compute platform</strong></b></u><span>: Traffic is shifted from your current serverless environment to one with your updated Lambda function versions. You can specify Lambda functions that perform validation tests and choose the way in which the traffic shift occurs. All AWS Lambda compute platform deployments are blue/green deployments. For this reason, you do not need to specify a deployment type.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an Amazon ECS compute platform:</strong></b></u><span>&nbsp;Traffic is shifted from the task set with the original version of a containerized application in an Amazon ECS service to a replacement task set in the same service. The protocol and port of a specified load balancer listener are used to reroute production traffic. During deployment, a test listener can be used to serve traffic to the replacement task set while validation tests are run.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The CodeDeploy agent is a software package that, when installed and configured on an instance, makes it possible for that instance to be used in CodeDeploy deployments. The CodeDeploy agent communicates outbound using HTTPS over port 443.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>It is also important to note that the CodeDeploy agent is required only if you deploy to an EC2/On-Premises compute platform. The agent is not required for deployments that use the Amazon ECS or AWS Lambda compute platform.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Therefore, the supported deployment types in CodeDeploy are:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">–&nbsp;&nbsp;Blue/green deployments to ECS</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">– In-place deployments to on-premises servers&nbsp;</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling deployments to ECS&nbsp;</strong></b><span>is incorrect because only blue/green deployment is allowed if you used the AWS CodeDeploy service to deploy the new version of your application to ECS. Take note that in CodeDeploy, only the EC2/On-Premises compute platform can use both in-place deployments and blue/green deployment. For Lambda and ECS, you can only do a blue/green deployment in CodeDeploy. This type of deployment is actually done in Elastic Beanstalk for Multicontainer docker environment which implicitly uses ECS.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">In-place deployments to AWS Lambda</strong></b><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">&nbsp;</strong></b></i><span>is incorrect because&nbsp;AWS Lambda compute platform deployments cannot use an in-place deployment type.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/green deployments to on-premises servers</strong></b><span>&nbsp;is incorrect because, in CodeDeploy, blue/green deployments only work with Amazon EC2 instances only.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533687,
+        "value": "In-place deployments to AWS Lambda.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533688,
+        "value": "Blue/green deployments to on-premises servers.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533689,
+        "value": "Blue/green deployments to ECS.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533690,
+        "value": "In-place deployments to on-premises servers",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533691,
+        "value": "Rolling deployments to ECS.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 7,
+    "type": "MULTIPLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533690,
+        "questionId": 382488,
+        "response": null,
+        "answerFeedback": null
+      },
+      {
+        "isCorrect": true,
+        "choiceId": 1533689,
+        "questionId": 382488,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382488,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The current application deployment process of a company is tedious and is prone to errors. They asked a developer to set up CodeDeploy as their deployment service, which can automate their application deployments on their hybrid cloud architecture.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following deployment types does CodeDeploy support? (Select TWO.)</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589448,
+    "question": "CodeDeploy",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">CodeDeploy</strong></b><span>&nbsp;is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.&nbsp;CodeDeploy can deploy application content that runs on a server and is stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. CodeDeploy can also deploy a serverless Lambda function. You do not need to make changes to your existing code before you can use CodeDeploy.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy supports the following deployment configurations:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-In-place (for EC2/On-premises)&nbsp;</strong></b><span>–&nbsp;the application on each instance in the deployment group is stopped, the latest application revision is installed, and the new version of the application is started and validated.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Canary (for Lambda/ECS) –</strong></b><span>&nbsp;traffic is shifted in two increments. You can choose from predefined canary options that specify the percentage of traffic shifted to your updated Lambda function or ECS task set in the first increment and the interval, in minutes, before the remaining traffic is shifted in the second increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Linear&nbsp;(for Lambda/ECS) –</strong></b><span>&nbsp;traffic is shifted in equal increments with an equal number of minutes between each increment. You can choose from predefined linear options that specify the percentage of traffic shifted in each increment and the number of minutes between each increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-All-at-once&nbsp;(for Lambda/ECS) –</strong></b><span>&nbsp;all traffic is shifted from the original Lambda function or ECS task set to the updated function or task set all at once.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(9).jpg\"><span>In a&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Canary</strong></b><span>&nbsp;deployment configuration, the traffic is shifted in&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">two</strong></b><span>&nbsp;increments. You can choose from predefined canary options that specify the percentage of traffic shifted to your updated Lambda function version in the first increment and the interval, in minutes, before the remaining traffic is shifted in the second increment. Hence, this is the correct answer which will satisfy the requirement for the given scenario.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Linear</strong></b><span>&nbsp;is incorrect because this will cause the traffic to be shifted in equal increments with an equal number of minutes between each increment. You can choose from predefined linear options that specify the percentage of traffic shifted in each increment and the number of minutes between each increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">All-at-once&nbsp;</strong></b><span>is incorrect because with this deployment configuration, the traffic is shifted from the original Lambda function to the updated Lambda function version all at once.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch</strong></b><span>&nbsp;is incorrect because this is only applicable in Elastic Beanstalk and not for Lambda.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html</span></a></p>",
+    "choices": [
+      {
+        "id": 1533692,
+        "value": "Canary",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533693,
+        "value": "Rolling with additional batch",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533694,
+        "value": "All-at-once",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533695,
+        "value": "Linear",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 8,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533692,
+        "questionId": 382489,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382489,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A Lambda function has been integrated with DynamoDB Streams as its event source. There has been a new version of the function that needs to be deployed using CodeDeploy where the traffic must be shifted in two increments. It should shift 10 percent of the incoming traffic to the new version in the first increment and then the remaining 90 percent should be deployed five minutes later.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following deployment configurations is the MOST suitable to satisfy this requirement?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589449,
+    "question": "CodePipeline ",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">CodeDeploy</strong></b><span>&nbsp;is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy can deploy application content that runs on a server and is stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. CodeDeploy can also deploy a serverless Lambda function. You do not need to make changes to your existing code before you can use CodeDeploy.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(10).jpg\"><span>CodeDeploy provides two deployment type options:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">In-place deployment</strong></b><span>: The application on each instance in the deployment group is stopped, the latest application revision is installed, and the new version of the application is started and validated. You can use a load balancer so that each instance is deregistered during its deployment and then restored to service after the deployment is complete. Only deployments that use the EC2/On-Premises compute platform can use in-place deployments. AWS Lambda compute platform deployments cannot use an in-place deployment type.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/green deployment</strong></b><span>: The behavior of your deployment depends on which compute platform you use:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an EC2/On-Premises compute platform:</strong></b></u><span>&nbsp;The instances in a deployment group (the original environment) are replaced by a different set of instances (the replacement environment). If you use an EC2/On-Premises compute platform, be aware that blue/green deployments work with Amazon EC2 instances only.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an AWS Lambda compute platform</strong></b></u><b><strong class=\"Editor__editor-text-bold___25KrR\">:</strong></b><span>&nbsp;Traffic is shifted from your current serverless environment to one with your updated Lambda function versions. You can specify Lambda functions that perform validation tests and choose the way in which the traffic shift occurs. All AWS Lambda compute platform deployments are blue/green deployments. For this reason, you do not need to specify a deployment type.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>–&nbsp;</span><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">Blue/green on an Amazon ECS compute platform:</strong></b></u><span>&nbsp;Traffic is shifted from the task set with the original version of a containerized application in an Amazon ECS service to a replacement task set in the same service. The protocol and port of a specified load balancer listener are used to reroute production traffic. During deployment, a test listener can be used to serve traffic to the replacement task set while validation tests are run.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The CodeDeploy agent is a software package that, when installed and configured on an instance, makes it possible for that instance to be used in CodeDeploy deployments. The CodeDeploy agent communicates outbound using HTTPS over port 443.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>It is also important to note that the CodeDeploy agent is required only if you deploy to an EC2/On-Premises compute platform. The agent is not required for deployments that use the Amazon ECS or AWS Lambda compute platform.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Therefore, the valid considerations in CodeDeploy in this scenario are:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">– AWS Lambda compute platform deployments cannot use an in-place deployment type.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">– CodeDeploy can deploy applications to both your EC2 instances as well as your on-premises servers.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">CodeDeploy can deploy applications to EC2, AWS Lambda, and Amazon ECS only&nbsp;</strong></b><span>is incorrect because it can also deploy to your on-premises servers.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">The CodeDeploy agent communicates using HTTP over port 80</strong></b><span>&nbsp;is incorrect because it is actually&nbsp;using HTTPS over port 443 and not HTTP.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">You have to install and use the CodeDeploy agent installed on your EC2 instances and ECS cluster&nbsp;</strong></b><span>is incorrect. Although this statement is true for EC2 instances, it is wrong for the latter as the CodeDeploy agent is not required for deployments that use the Amazon ECS or AWS Lambda compute platform.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://aws.amazon.com/getting-started/projects/set-up-ci-cd-pipeline/</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533696,
+        "value": "CodeDeploy can deploy applications to EC2, AWS Lambda, and Amazon ECS only.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533697,
+        "value": "CodeDeploy can deploy applications to both your EC2 instances as well as your on-premises servers.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533698,
+        "value": "AWS Lambda compute platform deployments cannot use an in-place deployment type.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533699,
+        "value": "You have to install and use the CodeDeploy agent installed on your EC2 instances and ECS cluster.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533700,
+        "value": "The CodeDeploy agent communicates using HTTP over port 80.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 9,
+    "type": "MULTIPLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533697,
+        "questionId": 382490,
+        "response": null,
+        "answerFeedback": null
+      },
+      {
+        "isCorrect": true,
+        "choiceId": 1533698,
+        "questionId": 382490,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382490,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A company is heavily using a range of AWS services to host their enterprise applications. Currently, their deployment process still has a lot of manual steps which is why they plan to automate their software delivery process using continuous integration and delivery (CI/CD) pipelines in AWS. They will use CodePipeline to orchestrate each step of their release process and CodeDeploy for deploying applications to various compute platforms in AWS.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>In this architecture, which of the following are valid considerations when using CodeDeploy? (Select TWO.)</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589450,
+    "question": "Elastic Beanstalk",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>In ElasticBeanstalk, you can choose from a variety of deployment methods:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-All at once</strong></b><span>&nbsp;– Deploy the new version to all instances simultaneously. All instances in your environment are out of service for a short time while the deployment occurs. This is the method that provides the least amount of time for deployment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Rolling</strong></b><span>&nbsp;– Deploy the new version in batches. Each batch is taken out of service during the deployment phase, reducing your environment’s capacity by the number of instances in a batch.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Rolling with additional batch</strong></b><span>&nbsp;– Deploy the new version in batches, but first launch a new batch of instances to ensure full capacity during the deployment process.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Immutable</strong></b><span>&nbsp;– Deploy the new version to a fresh group of instances by performing an&nbsp;</span><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>immutable update</span></a><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Blue/Green</strong></b><span>&nbsp;– Deploy the new version to a separate environment, and then swap CNAMEs of the two environments to redirect traffic to the new version instantly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Refer to the table below for the characteristics of each deployment method as well as the amount of time it takes to do the deployment, as seen in the&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Deploy Time</strong></b><span>&nbsp;column:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(11).jpg\"><span>Hence, the correct answer in this scenario is&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">All at once</strong></b><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling</strong></b><span>&nbsp;is incorrect because this will deploy the new version in batches only to existing instances, without provisioning new resources.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Immutable</strong></b><span>&nbsp;is incorrect because this will deploy the new version to a fresh group of instances by performing an immutable update. Considering the time to deploy additional instances and installing the new version, this option does not provide the least amount of deployment time.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch&nbsp;</strong></b><span>is incorrect because this just deploys the new version in batches. It first launches a new batch of instances to ensure full capacity during the deployment process then proceeds in deploying the new version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533701,
+        "value": "Rolling with additional batch",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533702,
+        "value": "Immutable",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533703,
+        "value": "Rolling",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533704,
+        "value": "All at once",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 10,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533704,
+        "questionId": 382491,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382491,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An application has recently been migrated from an on-premises data center to a development Elastic Beanstalk environment. A developer will do iterative tests and therefore needs to deploy code changes and view them as quickly as possible.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following options take the LEAST amount of time to complete the deployment?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589451,
+    "question": "RCU",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>One&nbsp;</span><i><em class=\"Editor__editor-text-italic___C9n8O\">read request unit</em></i><span>&nbsp;represents one strongly consistent read request, or two eventually consistent read requests, for an item up to 4 KB in size. Transactional read requests require 2 read request units to perform one read for items up to 4 KB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(12).jpg\"><span>For example, suppose that you create a table with 10 provisioned read capacity units. This allows you to perform 10 strongly consistent reads per second, or 20 eventually consistent reads per second, for items up to 4 KB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Reading an item larger than 4 KB consumes more read capacity units. For example, a strongly consistent read of an item that is 8 KB (4 KB × 2) consumes 2 read capacity units. An eventually consistent read on that same item consumes only 1 read capacity unit.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Item sizes for reads are rounded up to the next 4 KB multiple. For example, reading a 3,500-byte item consumes the same throughput as reading a 4 KB item.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">To get the number of RCU required to handle 150 eventually consistent read requests with an average item size of 3.5 KB, you simply have to do the following steps:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Step #1&nbsp;Get the Average Item Size by rounding up to 4 KB</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>= 3.5 KB = 4 KB (rounded up)</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Step #2&nbsp;Get the&nbsp;</strong></b><u><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-underline___y38TS\">RCU per Item</strong></b></u><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;by dividing the Average Item Size by 8 KB</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>=</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;4 KB / 8 KB</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>=&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">0.5&nbsp;</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Step #3&nbsp;Multiply the RCU per item to the number of items to be written per second</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>=</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;</strong></b><span>150 x 0.5</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>=&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">75&nbsp;eventually consistent read requests</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is&nbsp;</span><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">75.</strong></b></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">150</strong></b><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">&nbsp;</strong></b></i><span>is incorrect because this is the value for strongly consistent read requests based on the given RCU. Take note that for Step #2, you have to divide the Average Item Size by 8 KB and not by 4 KB, if you are calculating for eventual consistency.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">300</strong></b><span>&nbsp;is incorrect because this is the value for transactional read requests based on the given RCU.&nbsp;Take note that for Step #2, you have to divide the Average Item Size by 8 KB and not by 2 KB, if you are calculating for eventual consistency.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">600</strong></b><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">&nbsp;</strong></b></i><span>is incorrect because this is the value for transactional&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">write</strong></b><span>&nbsp;requests, which is irrelevant since only the RCU is provided in the scenario.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533705,
+        "value": "75",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533706,
+        "value": "150",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533707,
+        "value": "600",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533708,
+        "value": "300",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 11,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533705,
+        "questionId": 382492,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382492,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer is building an online game in AWS which will be using a NoSQL database with DynamoDB. Each player data has an average size of 3.5 KB and it is expected that the game will send 150 eventually consistent read requests per second.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>How may Read Capacity Units (RCU) should the developer provision to the table?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589452,
+    "question": "Lambda function",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>To create a Lambda function, you first create a Lambda function deployment package, a .zip or .jar file consisting of your code and any dependencies. When creating the zip, include only the code and its dependencies, not the containing folder. You will then need to set the appropriate security permissions for the zip package.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If you are using a CloudFormation template, you can configure the&nbsp;AWS::Lambda::Function&nbsp;resource which creates a Lambda function. To create a function, you need a deployment package and an execution role. The deployment package contains your function code. The execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request tracing</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(13).jpg\"></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Under the&nbsp;AWS::Lambda::Function&nbsp;resource, you can use the&nbsp;Code&nbsp;property which contains the deployment package for a Lambda function. For all runtimes, you can specify the location of an object in Amazon S3.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>For Node.js and Python functions, you can specify the function code inline in the template. Changes to a deployment package in Amazon S3 are not detected automatically during stack updates. To update the function code, change the object key or version in the template.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence,&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">including your function source inline in the&nbsp;ZipFile&nbsp;parameter of the&nbsp;AWS::Lambda::Function&nbsp;resource in the CloudFormation template</strong></b><span>&nbsp;is the easiest way to deploy the Lambda function to AWS.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Uploading the code in S3 then specifying the&nbsp;S3Key&nbsp;and&nbsp;S3Bucket&nbsp;parameters under the&nbsp;AWS::Lambda::Function&nbsp;resource in the CloudFormation template&nbsp;</strong></b><span>is incorrect. Although this is a valid deployment step, you still have to upload the code in S3 instead of just including the function source inline in the&nbsp;ZipFile&nbsp;parameter. Take note that the scenario explicitly mentions that you have to pick the easiest way.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Including your function source inline in the&nbsp;Code&nbsp;parameter of the&nbsp;AWS::Lambda::Function&nbsp;resource in the CloudFormation template&nbsp;</strong></b><span>is incorrect because you should use the&nbsp;ZipFile&nbsp;parameter instead. Take note that the&nbsp;Code&nbsp;property is the parent property of the&nbsp;ZipFile&nbsp;parameter.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Uploading the code in S3 as a ZIP file then specifying the S3 path in the&nbsp;ZipFile&nbsp;parameter of the&nbsp;AWS::Lambda::Function&nbsp;resource in the CloudFormation template&nbsp;</strong></b><span>is incorrect because contrary to its name, the&nbsp;ZipFile&nbsp;parameter directly accepts the source code of your Lambda function and not an actual zip file.&nbsp;If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">zips</strong></b><span>&nbsp;it to create a deployment package. This is the reason why it is called the “ZipFile\"&nbsp;parameter.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533709,
+        "value": "Upload the code in S3 then specify the S3Key and S3Bucket parameters under the AWS::Lambda::Function resource in the CloudFormation template.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533710,
+        "value": "Include your function source inline in the Code parameter of the AWS::Lambda::Function resource in the CloudFormation template.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533711,
+        "value": "Upload the code in S3 as a ZIP file then specify the S3 path in the ZipFile parameter of the AWS::Lambda::Function resource in the CloudFormation template.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533712,
+        "value": "Include your function source inline in the ZipFile parameter of the AWS::Lambda::Function resource in the CloudFormation template",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 12,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533712,
+        "questionId": 382493,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382493,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Due to the popularity of serverless computing, your manager instructed you to share your technical expertise to the whole software development department of your company. You are planning to deploy a simple Node.js ‘Hello World’ Lambda function to AWS using CloudFormation.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following is the EASIEST way of deploying the function to AWS?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589453,
+    "question": "CodeDeploy",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy is a deployment service that automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services.&nbsp;CodeDeploy can deploy application content that runs on a server and is stored in Amazon S3 buckets, GitHub repositories, or Bitbucket repositories. CodeDeploy can also deploy a serverless Lambda function. You do not need to make changes to your existing code before you can use CodeDeploy.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>CodeDeploy supports the following deployment configurations:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-In-place (for EC2/On-premises)&nbsp;</strong></b><span>– the application on each instance in the deployment group is stopped, the latest application revision is installed, and the new version of the application is started and validated.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Canary (for Lambda/ECS) –</strong></b><span>&nbsp;traffic is shifted in two increments. You can choose from predefined canary options that specify the percentage of traffic shifted to your updated Lambda function or ECS task set in the first increment and the interval, in minutes, before the remaining traffic is shifted in the second increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-Linear&nbsp;(for Lambda/ECS) –</strong></b><span>&nbsp;traffic is shifted in equal increments with an equal number of minutes between each increment. You can choose from predefined linear options that specify the percentage of traffic shifted in each increment and the number of minutes between each increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">-All-at-once&nbsp;(for Lambda/ECS) –</strong></b><span>&nbsp;all traffic is shifted from the original Lambda function or ECS task set to the updated function or task set all at once.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(14).jpg\"><span>In a&nbsp;Linear&nbsp;deployment configuration, the traffic will be shifted in equal increments with an equal number of minutes between each increment. You can choose from predefined linear options that specify the percentage of traffic shifted in each increment and the number of minutes between each increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the is the correct answer is:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Deploy the functions using a Linear deployment configuration.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Deploy the functions using a Canary deployment configuration</strong></b><span>&nbsp;is incorrect because this will cause the traffic to be shifted in&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">two</strong></b><span>&nbsp;increments. You can choose from predefined canary options that specify the percentage of traffic shifted to your updated Lambda function version in the first increment and the interval, in minutes, before the remaining traffic is shifted in the second increment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Deploy the functions using an All-at-once deployment configuration&nbsp;</strong></b><span>is incorrect because, with this deployment configuration, the traffic is shifted from the original Lambda function to the updated Lambda function version all at once.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Deploy the functions using an Immutable deployment configuration</strong></b><span>&nbsp;is incorrect because this is only applicable in Elastic Beanstalk and not to Lambda.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-configurations.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html</span></a></p>",
+    "choices": [
+      {
+        "id": 1533713,
+        "value": "Deploy the functions using an All-at-once deployment configuration.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533714,
+        "value": "Deploy the functions using an Immutable deployment configuration.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533715,
+        "value": "Deploy the functions using a Canary deployment configuration.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533716,
+        "value": "Deploy the functions using a Linear deployment configuration.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 13,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533716,
+        "questionId": 382494,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382494,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A serverless application, which is composed of multiple Lambda functions, has been deployed using AWS SAM. A developer was instructed to easily manage the deployments of the functions using CodeDeploy. When there is a new deployment, 10 percent of the incoming traffic should be shifted to the new version every 10 minutes until all traffic is shifted from the old version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>What should the developer do to properly deploy the functions that satisfies this requirement?</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589454,
+    "question": "Lambda function",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can configure your Lambda function to pull in additional code and content in the form of layers. A layer is a ZIP archive that contains libraries, a&nbsp;</span><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/runtimes-custom.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>custom runtime</span></a><span>, or other dependencies. With layers, you can use libraries in your function without needing to include them in your deployment package.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Layers let you keep your deployment package small, which makes development easier. You can avoid errors that can occur when you install and package dependencies with your function code. For Node.js, Python, and Ruby functions, you can&nbsp;</span><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/code-editor.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>develop your function code in the Lambda console</span></a><span>&nbsp;as long as you keep your deployment package under 3 MB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(15).jpg\"><span>A function can use up to 5 layers at a time. The total unzipped size of the function and all layers can’t exceed the unzipped deployment package size limit of 250 MB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can create layers, or use layers published by AWS and other AWS customers. Layers support resource-based policies for granting layer usage permissions to specific AWS accounts, AWS Organizations, or all accounts. Layers are extracted to the /opt directory in the function execution environment. Each runtime looks for libraries in a different location under /opt, depending on the language. Structure your layer so that function code can access libraries without additional configuration.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is to&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">upload the other dependencies of your function as a separate Lambda Layer instead.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Uploading the deployment package to S3&nbsp;</strong></b><span>is incorrect. Although you can upload large deployment packages of over 50 MB in size via S3, your function will still be in a single layer. This doesn’t meet the requirement of making the deployment package small and modularized. You have to use Lambda Layers instead.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Zipping the deployment package again to further compress the zip file&nbsp;</strong></b><span>is incorrect because doing this will not significantly make the ZIP file smaller.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Compressing the deployment package as TAR file instead</strong></b><span>&nbsp;is incorrect. Although it may decrease the size of the deployment package, it is still not enough to totally solve the issue. A compressed TAR file is not significantly smaller as compared to a ZIP file.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/limits.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/lambda/latest/dg/limits.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533717,
+        "value": "Zip the deployment package again to further compress the zip file.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533718,
+        "value": "Upload the deployment package to S3.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533719,
+        "value": "Compress the deployment package as TAR file instead.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533720,
+        "value": "Upload the other dependencies of your function as a separate Lambda Layer instead",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 14,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533720,
+        "questionId": 382495,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382495,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A company is deploying the package of its Lambda function, which is compressed as a ZIP file, to AWS. However, they are getting an error in the deployment process because the package is too large. The manager instructed the developer to keep the deployment package small to make the development process much easier and more modularized. This should also help prevent errors that may occur when dependencies are installed and packaged with the function code.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following options is the MOST suitable solution that the developer should implement?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589455,
+    "question": "CloudFormation",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS CloudFormation</strong></b><span>&nbsp;provides the following Python helper scripts that you can use to install software and start services on an Amazon EC2 instance that you create as part of your stack:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>cfn-init</span></a><span>: Use to retrieve and interpret resource metadata, install packages, create files, and start services.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>cfn-signal</span></a><span>: Use to signal with a CreationPolicy or WaitCondition, so you can synchronize other resources in the stack when the prerequisite resource or application is ready.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-get-metadata.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>cfn-get-metadata</span></a><span>: Use to retrieve metadata for a resource or path to a specific key.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>cfn-hup</span></a><span>: Use to check for updates to metadata and execute custom hooks when changes are detected.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You call the scripts directly from your template. The scripts work in conjunction with resource metadata that’s defined in the same template. The scripts run on the Amazon EC2 instance during the stack creation process. The scripts are not executed by default. You must include calls in your template to execute specific helper scripts.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(16).jpg\"><span>Hence,&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">cfn-init</strong></b><span>&nbsp;helper script is the correct answer since it interprets the metadata that contains the sources, packages, files, and services. You run the script on the EC2 instance when it is launched. The script is installed by default on Amazon Linux and Windows AMIs.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">cfn-get-metadata</strong></b><span>&nbsp;helper script is incorrect since it is only a wrapper script that retrieves either all metadata that is defined for a resource or path to a specific key or a subtree of the resource metadata, but does not interpret the resource metadata, install packages, create files, and start services.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">cfn-signal&nbsp;</strong></b><span>helper script is incorrect since it does not perform any retrieval and interpretation of resource metadata, installation of packages, creation of files, and starting of services. Instead, it is a wrapper thats signals an AWS CloudFormation WaitCondition for synchronizing other resources in the stack when the application is ready.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">cfn-hup&nbsp;</strong></b><span>helper script is incorrect because this is just a daemon that checks for updates to metadata and executes custom hooks when changes are detected. It does not retrieve and interpret the resource metadata, install packages, create files, and start services unlike cfn-init helper script.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts-reference.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-helper-scripts-reference.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533721,
+        "value": "cfn-init",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533722,
+        "value": "cfn-hup",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533723,
+        "value": "cfn-signal",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533724,
+        "value": "cfn-get-metadata",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 15,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533721,
+        "questionId": 382496,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382496,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An aerospace engineering company has recently migrated to AWS for their cloud architecture. They are using CloudFormation and AWS SAM as deployment services for both of their monolithic and serverless applications. There is a new requirement where you have to dynamically install packages, create files, and start services on your EC2 instances upon the deployment of the application stack using CloudFormation.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following helper scripts should you use in this scenario?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589456,
+    "question": "Python code",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>To create a Lambda function you first create a Lambda function deployment package, a .zip or .jar file consisting of your code and any dependencies. When creating the zip, include only the code and its dependencies, not the containing folder. You will then need to set the appropriate security permissions for the zip package.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>If you are using a CloudFormation template, you can configure the&nbsp;AWS::Lambda::Function&nbsp;resource which creates a Lambda function. To create a function, you need a deployment package and an execution role. The deployment package contains your function code. The execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs for log streaming and AWS X-Ray for request tracing.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(17).jpg\"><span>Under the&nbsp;AWS::Lambda::Function&nbsp;resource, you can use the&nbsp;Code&nbsp;property which contains the deployment package for a Lambda function. For all runtimes, you can specify the location of an object in Amazon S3.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>For Node.js and Python functions, you can specify the function code inline in the template. Changes to a deployment package in Amazon S3 are not detected automatically during stack updates. To update the function code, change the object key or version in the template.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">ZipFile&nbsp;</strong></b><span>parameter to is the correct one to be used in this scenario, which will allow the developer to place the python code inline in the template.&nbsp;If you include your function source inline with this parameter, AWS CloudFormation places it in a file named index and&nbsp;</span><i><em class=\"Editor__editor-text-italic___C9n8O\">zips</em></i><span>&nbsp;it to create a deployment package. This is the reason why it is called the “ZipFile\"&nbsp;parameter, and not because it accepts zip files.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Handler</strong></b><span>&nbsp;parameter is incorrect because this is not a valid property of&nbsp;AWS::Lambda::Function&nbsp;resource but of the&nbsp;AWS::Serverless::Function&nbsp;resource in AWS SAM. In addition, this parameter is primarily used to specify the name of the handler, which is just a function in your code that AWS Lambda can invoke when the service executes your code.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Code</strong></b><span>&nbsp;parameter is incorrect because&nbsp;you should use the&nbsp;ZipFile&nbsp;parameter instead. Take note that the&nbsp;Code&nbsp;property is the parent property of the&nbsp;ZipFile&nbsp;parameter.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">CodeUri</strong></b><span>&nbsp;parameter is incorrect because&nbsp;this is not a valid property of&nbsp;AWS::Lambda::Function&nbsp;resource but of the&nbsp;AWS::Serverless::Function&nbsp;resource in AWS SAM. This parameter accepts the S3 URL of your code and not the actual code itself.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533725,
+        "value": "CodeUri",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533726,
+        "value": "ZipFile",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533727,
+        "value": "Code",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533728,
+        "value": "Handler",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 16,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533726,
+        "questionId": 382497,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382497,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer is writing a CloudFormation template which will be used to deploy a simple Lambda function to AWS. The function to be deployed is made in Python with just 3 lines of codes which can be written inline in the template.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which parameter of the&nbsp;AWS::Lambda::Function&nbsp;resource should the developer use to place the Python code in the template?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589457,
+    "question": "CloudFormation template",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\"><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>AWS CloudFormation is a service that helps you model and set up your Amazon Web Services resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. You create a template that describes all the AWS resources that you want, and AWS CloudFormation takes care of provisioning and configuring those resources for you.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A Cloudformation template is a JSON- or YAML-formatted text file that describes your AWS infrastructure. The template includes several sections for you to define your infrastructure code.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>For&nbsp;serverless applications&nbsp;(also referred to as Lambda-based applications), the&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Transform</strong></b><span>&nbsp;section specifies the version of the&nbsp;AWS Serverless Application Model (AWS SAM)&nbsp;to use. When you specify a transform, you can use AWS SAM syntax to declare resources in your template. The model defines the syntax that you can use and how it is processed.&nbsp; More specifically, the&nbsp;AWS::Serverless&nbsp;transform, which is a macro hosted by AWS CloudFormation, takes an entire template written in the AWS Serverless Application Model (AWS SAM) syntax and transforms and expands it into a compliant AWS CloudFormation template.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(18).jpg\"><span>In the following example, the template uses AWS SAM syntax to simplify the declaration of a Lambda function and its execution role.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">Transform: AWS::Serverless-2016-10-31</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">Resources:</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">MyServerlessFunctionLogicalID:</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">&nbsp;&nbsp;&nbsp; Type: AWS::Serverless::Function</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">&nbsp;&nbsp;&nbsp; Properties:</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Handler: index.handler</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runtime: nodejs8.10</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><i><em class=\"Editor__editor-text-italic___C9n8O\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CodeUri: 's3://testBucket/mySourceCode.zip'</em></i></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is:</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;Add a&nbsp;Transform&nbsp;section in the template to specify the version of the&nbsp;AWS Serverless Application Model (AWS SAM)&nbsp;to use.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Add a&nbsp;Parameters&nbsp;section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use&nbsp;</strong></b><span>is incorrect because this is just the part of the template that contains values to pass to your template at runtime when you create or update a stack.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Add a&nbsp;Resources&nbsp;section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use.&nbsp;</strong></b><span>is incorrect because this is primarily used to specify the stack resources and their properties.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Add a&nbsp;Mappings&nbsp;section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use&nbsp;</strong></b><span>is incorrect because this just lists a mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table. You can match a key to a corresponding value by using the&nbsp;Fn::FindInMap&nbsp;intrinsic function in the&nbsp;Resources&nbsp;and&nbsp;Outputs&nbsp;sections.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533729,
+        "value": "Add a Transform section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533730,
+        "value": "Add a Mappings section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533731,
+        "value": "Add a Resources section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533732,
+        "value": "Add a Parameters section in the template to specify the version of the AWS Serverless Application Model (AWS SAM) to use.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 17,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533729,
+        "questionId": 382498,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382498,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>applications in your serverless infrastructure. Your manager instructed you to create a CloudFormation template that includes your SAM script and other service configurations. This template will be used to launch a similar infrastructure in another region.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>What should you do in order to accomplish this task?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589458,
+    "question": "Amazon S3",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS SAM</strong></b><span>&nbsp;uses AWS CloudFormation as the underlying deployment mechanism.&nbsp;You can deploy your application by using AWS SAM command line interface (CLI) commands. You can also use other AWS services that integrate with AWS SAM to automate your deployments.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>After you develop and test your serverless application locally, you can package and deploy your application by using the&nbsp;sam deploy&nbsp;command.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(19).jpg\"><span>The&nbsp;sam deploy&nbsp;command zips your code artifacts, uploads them to Amazon S3, and produces a packaged AWS SAM template file that it uses&nbsp;to deploy your application.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>To deploy an application that contains one or more nested applications, you must include the&nbsp;CAPABILITY_AUTO_EXPAND&nbsp;capability in the&nbsp;sam deploy&nbsp;command.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is:</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;sam deploy</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">aws cloudformation deploy</strong></b><span>&nbsp;is incorrect. While this command can be used to deploy a CloudFormation stack, it expects that your artifacts are already packaged and uploaded to S3. It doesn’t handle the packaging process implicitly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">sam package&nbsp;</strong></b><span>is incorrect. This command simply prepares the serverless application for deployment by zipping artifacts, uploading them to S3, and generating a CloudFormation template with references to the uploaded artifacts in S3. It doesn’t deploy the application.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">sam publish</strong></b><span>&nbsp;is incorrect because this command publishes an AWS SAM application to the AWS Serverless Application Repository and does not generate the template file. It takes a packaged AWS SAM template and publishes the application to the specified region.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-deploying.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-deploying.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverlessrepo/latest/devguide/what-is-serverlessrepo.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533733,
+        "value": "sam deploy",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533734,
+        "value": "sam publish",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533735,
+        "value": "aws cloudformation deploy",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533736,
+        "value": "sam package",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 18,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533733,
+        "questionId": 382499,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382499,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A development team has recently completed building their serverless application. They must zip their code artifacts, upload them to Amazon S3, produce the package template file for deployment, and deploy it to AWS.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which command is the MOST suitable to use to automate the deployment steps?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589459,
+    "question": "CloudFormation template f",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS CloudFormation StackSets</strong></b><span>&nbsp;extends the functionality of stacks by enabling you to create, update, or delete stacks across multiple accounts and regions with a single operation. Using an administrator account, you define and manage an AWS CloudFormation template, and use the template as the basis for provisioning stacks into selected target accounts across specified regions.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(20).jpg\"><span>After you’ve defined a stack set, you can create, update, or delete stacks in the target accounts and regions you specify. When you create, update, or delete stacks, you can also specify operational preferences, such as the order of regions in which you want the operation to be performed, the failure tolerance beyond which stack operations stop, and the number of accounts in which operations are performed on stacks concurrently. Remember that a stack set is a regional resource so if you create a stack set in one region, you cannot see it or change it in other regions.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Creating and managing stacks on multiple AWS accounts using CloudFormation Change Sets</strong></b><span>&nbsp;is incorrect because Change Sets only allow you to preview how proposed changes to a stack might impact your running resources. In this scenario, the most suitable way to meet the requirement is to use StackSets.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Defining and managing stack instances on multiple AWS Accounts using CloudFormation Stack Instances</strong></b><span>&nbsp;is incorrect because a stack instance is simply a reference to a stack in a target account within a region. Remember that a stack instance is associated with one stack set which is why this is just one of the components of CloudFormation StackSets.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Use AWS CodePipeline to automate the deployment of CloudFormation templates across multiple accounts</strong></b><span>&nbsp;is incorrect. AWS CodePipeline can automate the deployment process, but it is primarily a CI/CD tool. While it can be configured to deploy CloudFormation templates, it does not inherently provide the same level of centralized management for multiple accounts and regions as StackSets does.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533737,
+        "value": "Create and manage stacks on multiple AWS accounts using CloudFormation Change Sets",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533738,
+        "value": "Use AWS CodePipeline to automate the deployment of CloudFormation templates across multiple accounts.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533739,
+        "value": "Update the stacks on multiple AWS accounts using CloudFormation StackSets.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533740,
+        "value": "Define and manage stack instances on multiple AWS Accounts using CloudFormation Stack Instances.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 19,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533739,
+        "questionId": 382500,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382500,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An application architect manages several AWS accounts for staging, testing, and production environments, which are used by several development teams. For application deployments, the developers use the similar base CloudFormation template for their applications.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following can allow the developer to effectively manage the updates on this template across all AWS accounts with minimal effort?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589460,
+    "question": "CodeDeploy",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The content in the&nbsp;'hooks'&nbsp;section of the AppSpec file varies, depending on the compute platform for your deployment. The&nbsp;'hooks'&nbsp;section for an EC2/On-Premises deployment contains mappings that link deployment lifecycle event hooks to one or more scripts. The&nbsp;'hooks'&nbsp;section for a Lambda or an Amazon ECS deployment specifies Lambda validation functions to run during a deployment lifecycle event. If an event hook is not present, no operation is executed for that event. This section is required only if you are running scripts or Lambda validation functions as part of the deployment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An AWS Lambda hook is one Lambda function specified with a string on a new line after the name of the lifecycle event. Each hook is executed once per deployment. Following are descriptions of the hooks that are available for use in your AppSpec file.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">BeforeAllowTraffic</strong></b><span>&nbsp;– Use to run tasks before traffic is shifted to the deployed Lambda function version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AfterAllowTraffic</strong></b><span>&nbsp;– Use to run tasks after all traffic is shifted to the deployed Lambda function version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>In a serverless Lambda function version deployment, event hooks run in the following order:</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(21).jpg\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Take note that&nbsp;Start,&nbsp;AllowTraffic, and&nbsp;End&nbsp;events in the deployment cannot be scripted, which is why they appear in gray in the above diagram.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">BeforeAllowTraffic</strong></b><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Start</strong></b><span>&nbsp;is incorrect because this deployment lifecycle event in Lambda cannot be scripted or used. In this scenario, the correct event that you should configure is the&nbsp;</span><i><em class=\"Editor__editor-text-italic___C9n8O\">BeforeAllowTraffic</em></i><span>&nbsp;event.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">BeforeInstall</strong></b><span>&nbsp;is incorrect because this event is only applicable for ECS, EC2 or On-Premises compute platforms and not for Lambda deployments.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Install</strong></b><span>&nbsp;is incorrect because this&nbsp;uses the CodeDeploy agent to copy the revision files from the temporary location to the final destination folder of the EC2 or On-Premises server. This deployment lifecycle event is not available for Lambda as well as for ECS deployments.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533741,
+        "value": "Start",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533742,
+        "value": "BeforeInstall",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533743,
+        "value": "Install",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533744,
+        "value": "BeforeAllowTraffic",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 20,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533744,
+        "questionId": 382501,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382501,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer is preparing the application specification (AppSpec) file in CodeDeploy, which will be used to deploy her Lambda functions to AWS. In the deployment, she needs to configure CodeDeploy to run a task before the traffic is shifted to the deployed Lambda function version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which deployment lifecycle event should she configure in this scenario?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589461,
+    "question": "Stack",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS Serverless Application Model (AWS SAM)</strong></b><span>&nbsp;is an open-source framework that you can use to build serverless applications on AWS. It consists of the AWS SAM template specification that you use to define your serverless applications and the AWS SAM command line interface (AWS SAM CLI) that you use to build, test, and deploy your serverless applications.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(22).jpg\"><span>Because AWS SAM is an extension of AWS CloudFormation, you get the reliable deployment capabilities of AWS CloudFormation. You can define resources by using AWS CloudFormation in your AWS SAM template. Also, you can use the full suite of resources, intrinsic functions, and other template features that are available in AWS CloudFormation.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can use AWS SAM with a suite of AWS tools for building serverless applications. The AWS SAM CLI lets you locally build, test, and debug serverless applications that are defined by AWS SAM templates. The CLI provides a Lambda-like execution environment locally. It helps you catch issues upfront by providing parity with the actual Lambda execution environment. To step through and debug your code to understand what the code is doing, you can use AWS SAM with AWS toolkits like the AWS Toolkit for JetBrains, AWS Toolkit for PyCharm, AWS Toolkit for IntelliJ, and AWS Toolkit for Visual Studio Code. This tightens the feedback loop by making it possible for you to find and troubleshoot issues that you might run into in the cloud.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Therefore, the most suitable service to use in this scenario is</span><b><strong class=\"Editor__editor-text-bold___25KrR\">&nbsp;AWS Serverless Application Model (AWS SAM)</strong></b><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS CloudFormation</strong></b><span>&nbsp;is incorrect. Although this service can certainly be used to deploy Lambda, API Gateway, DynamoDB, and other AWS resources of your serverless application, it doesn’t have the capability to locally build, test, and debug your application like what AWS SAM has. In addition, AWS SAM is a more suitable service to use if you want to deploy and manage your serverless applications in AWS just as mentioned above.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS Systems Manager</strong></b><span>&nbsp;is incorrect because this service is primarily used for managing resources in your AWS environment, not for building, testing, and debugging serverless applications.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS Elastic Beanstalk</strong></b><i><b><strong class=\"Editor__editor-text-bold___25KrR Editor__editor-text-italic___C9n8O\">&nbsp;</strong></b></i><span>is incorrect because this service is not suitable for deploying serverless applications. In addition,&nbsp;it doesn’t have the capability to locally build, test, and debug your serverless applications as effectively as what AWS SAM can do.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/automating-updates-to-serverless-apps.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/automating-updates-to-serverless-apps.html</span></a></p>",
+    "choices": [
+      {
+        "id": 1533745,
+        "value": "AWS Elastic Beanstalk",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533746,
+        "value": "AWS Systems Manager",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533747,
+        "value": "AWS CloudFormation",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533748,
+        "value": "AWS Serverless Application Model (AWS SAM)",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 21,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533748,
+        "questionId": 382502,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382502,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A developer is instructed to set up a new serverless architecture composed of AWS Lambda, API Gateway, and DynamoDB in a single stack. The new architecture should allow the developer to locally build, test, and debug serverless applications.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following should the developer use to satisfy the above requirement?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589462,
+    "question": "Lambda function",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can configure your Lambda function to pull in additional code and content in the form of layers. A layer is a ZIP archive that contains libraries, a&nbsp;custom runtime, or other dependencies. With layers, you can use libraries in your function without needing to include them in your deployment package.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Layers let you keep your deployment package small, which makes development easier. You can avoid errors that can occur when you install and package dependencies with your function code. For Node.js, Python, and Ruby functions, you can&nbsp;develop your function code in the Lambda console&nbsp;as long as you keep your deployment package under 3 MB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(23).jpg\"><span>A function can use up to 5 layers at a time. The total unzipped size of the function and all layers can’t exceed the unzipped deployment package size limit of 250 MB.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can create layers, or use layers published by AWS and other AWS customers. Layers support resource-based policies for granting layer usage permissions to specific AWS accounts, AWS Organizations, or all accounts. Layers are extracted to the /opt directory in the function execution environment. Each runtime looks for libraries in a different location under /opt, depending on the language. Structure your layer so that function code can access libraries without additional configuration.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is to use Lambda&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Layers</strong></b><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Alias</strong></b><span>&nbsp;is incorrect because this is just like a pointer to a specific Lambda function version. This will not enable your function to pull in additional code and other dependencies from another source.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Execution Context</strong></b><span>&nbsp;is incorrect because&nbsp;this is a temporary runtime environment that initializes any external dependencies of your Lambda function code, such as database connections or HTTP endpoints.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Environment Variable</strong></b><span>&nbsp;is incorrect because this just enables you to dynamically pass settings to your function code and libraries, without making changes to your code.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/lambda/latest/dg/limits.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/lambda/latest/dg/limits.html</span></a></p>",
+    "choices": [
+      {
+        "id": 1533749,
+        "value": "Layers",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533750,
+        "value": "Execution Context",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533751,
+        "value": "Environment Variable",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533752,
+        "value": "Alias",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 22,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533749,
+        "questionId": 382503,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382503,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>A Lambda function is over 80 MB in size, which exceeds the deployment package size limit for direct uploads. You want to refactor the function to pull in additional code and other dependencies from another source, which will reduce the size of the deployment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which feature of Lambda should you use in order to implement the above task?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589463,
+    "question": "AWS Elastic Beanstalk",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">CodeCommit</strong></b><span>&nbsp;is a secure, highly scalable, managed source control service that hosts private Git repositories. CodeCommit eliminates the need for you to manage your own source control system or worry about scaling its infrastructure.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(24).jpg\"><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS CodeCommit</strong></b><span>&nbsp;is designed for collaborative software development. You can easily commit, branch, and merge your code allowing you to easily maintain control of your team’s projects. CodeCommit also supports pull requests, which provide a mechanism to request code reviews and discuss code with collaborators. You can create a repository from the AWS Management Console, AWS CLI, or AWS SDKs and start working with the repository using Git.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You&nbsp;can&nbsp;use the&nbsp;EB CLI&nbsp;to&nbsp;deploy&nbsp;your application directly from your AWS&nbsp;CodeCommit&nbsp;repository. With&nbsp;CodeCommit, you&nbsp;can&nbsp;upload&nbsp;only&nbsp;your changes to the repository when you&nbsp;deploy, instead of uploading your entire project.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Create an AWS CodeCommit repository and allow access to all developers. Deploy the code to Elastic Beanstalk.</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Host the code repository on an EC2 instance and allow access to all the developers. Write a script that will automate the deployment process to Elastic Beanstalk&nbsp;</strong></b><span>is incorrect because this solution entails a lot of effort — from selecting the AMI to managing the instance, setting up a code repository, and configuring scalability. AWS CodeCommit is already a managed and highly scalable source control service that has native integration with Elastic Beanstalk.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Configure event notifications on a central S3 bucket and allow access to all developers. Invoke a Lambda Function that will deploy the code to Elastic Beanstalk when a PUT event occurs&nbsp;</strong></b><span>is incorrect. Amazon S3 does not have the functionality to modify stored objects. Incremental code updates are not possible with S3, which defies the requirement for the scenario.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Upload the code to an Amazon EFS mounted on an EC2 instance. Write a script that will automate the deployment process to Elastic Beanstalk&nbsp;</strong></b><span>is incorrect. Although EFS is a good use case for concurrent access, it is not a suitable solution for a source control service. EFS is less performant to workloads that require random access over large files. Use EFS if you want to distribute highly parallelized workloads like analytical workloads and media processing across several machines.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://aws.amazon.com/premiumsupport/knowledge-center/deploy-codecommit-elastic-beanstalk/\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://aws.amazon.com/premiumsupport/knowledge-center/deploy-codecommit-elastic-beanstalk/</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli-codecommit.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli-codecommit.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533753,
+        "value": "Upload the code to an Amazon EFS mounted on an EC2 instance. Write a script that will automate the deployment process to Elastic Beanstalk.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533754,
+        "value": "Create an AWS CodeCommit repository and allow access to all developers. Deploy the code to Elastic Beanstalk.",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533755,
+        "value": "Configure event notifications on a central S3 bucket and allow access to all developers. Invoke a Lambda Function that will deploy the code to Elastic Beanstalk when a PUT event occurs.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533756,
+        "value": "Host the code repository on an EC2 instance and allow access to all the developers. Write a script that will automate the deployment process to Elastic Beanstalk.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 23,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533754,
+        "questionId": 382504,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382504,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Several development teams worldwide will be collaboratively working on a project hosted on an AWS Elastic Beanstalk environment. The developers need to be able to deploy incremental code updates without re-uploading the entire project.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following actions will reduce the upload and deployment time with the LEAST amount of effort?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589464,
+    "question": "Elastic Beanstalk",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Because&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">AWS Elastic Beanstalk</strong></b><span>&nbsp;performs an in-place update when you update your application versions, your application can become unavailable to users for a short period of time. You can avoid this downtime by performing a blue/green deployment, where you deploy the new version to a separate environment and then swap CNAMEs of the two environments to redirect traffic to the new version instantly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Blue/green deployments require that your environment runs independently of your production database if your application uses one. If your environment has an Amazon RDS DB instance attached to it, the data will not transfer over to your second environment and will be lost if you terminate the original environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><img src=\"http://static.cdn.epam.com/uploads/edd5f87315fbce8b3b6bc0b7376c0f0e/Deployment/hint(25).jpg\"><span>In Elastic Beanstalk, you can choose from a variety of deployment methods:</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">All at once</strong></b><span>&nbsp;– Deploy the new version to all instances simultaneously. All instances in your environment are out of service for a short time while the deployment occurs.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling</strong></b><span>&nbsp;– Deploy the new version in batches. Each batch is taken out of service during the deployment phase, reducing your environment’s capacity by the number of instances in a batch.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch</strong></b><span>&nbsp;– Deploy the new version in batches, but first launch a new batch of instances to ensure full capacity during the deployment process.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Immutable</strong></b><span>&nbsp;– Deploy the new version to a fresh group of instances by performing an&nbsp;immutable update.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Traffic splitting&nbsp;</strong></b><span>–&nbsp;Percentage of client traffic routed to new version temporarily impacted</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/Green</strong></b><span>&nbsp;– Deploy the new version to a separate environment, and then swap CNAMEs of the two environments to redirect traffic to the new version instantly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The scenario is asking for the least impact on the application’s availability if a deployment fails. Naturally, we’d want to roll back to the last working version if a deployment does not succeed. The rollback process for a Blue/green deployment is the fastest since all you have to do is switch back to the working environment’s URL.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Blue/Green</strong></b><span>.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">All at once</strong></b><span>&nbsp;is incorrect because this method deploys the new version to all instances simultaneously, which causes your instances to be out of service for a short time while the deployment occurs. This is also the case when you revert a failed deployment. In short, All at once has the MOST impact on your application’s availability in case the deployment fails.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling with additional batch</strong></b><span>&nbsp;is incorrect. Although this method ensures full capacity during deployment, its rollback process is quite slow because the deployment is done on fresh instances alongside the existing ones.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Rolling&nbsp;</strong></b><span>is incorrect. With Rolling, your environment’s capacity to serve traffic is reduced by the number of instances the new version is being rolled out to, which may impact the availability of your application.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.rolling-version-deploy.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environmentmgmt-updates-immutable.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533757,
+        "value": "All at Once",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533758,
+        "value": "Rolling",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533759,
+        "value": "Blue/Green",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533760,
+        "value": "Rolling with Additional Batches",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 24,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533759,
+        "questionId": 382505,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382505,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An Elastic Beanstalk application becomes inaccessible for several minutes whenever a failed deployment is rolled back. A developer should recommend a strategy that will have the least impact on the application’s availability if the deployment fails. Teams must be able to revert changes quickly as well.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which deployment method should the developer suggest?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  },
+  {
+    "answerId": 38589465,
+    "question": "Elastic Beanstalk",
+    "questionClass": "EDU",
+    "hint": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Elastic Beanstalk</strong></b><span>&nbsp;regularly releases new platform versions to update all Linux-based and Windows Server-based&nbsp;platforms. New platform versions provide updates to existing software components and support for new features and configuration options.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>You can use the Elastic Beanstalk console or the EB CLI to update your environment’s platform version. Depending on the platform version you’d like to update to, Elastic Beanstalk recommends one of two methods for performing platform updates.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Method 1 – Update your Environment’s Platform Version</strong></b><span>&nbsp;– This is the recommended method when you’re updating to the latest platform version, without a change in runtime, web server, or application server versions, and without a change in the major platform version. This is the most common and routine platform update.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">Method 2 – Perform a Blue/Green Deployment</strong></b><span>&nbsp;– This is the recommended method when you’re updating to a different runtime, web server, or application server version or to a different major platform version. This is a good approach&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">when you want to take advantage of new runtime capabilities</strong></b><span>&nbsp;or the latest Elastic Beanstalk functionality.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Because AWS Elastic Beanstalk performs an in-place update when you update your application versions, your application can become unavailable to users for a short period of time. You can avoid this downtime by performing a blue/green deployment, where you deploy the new version to a separate environment and then swap CNAMEs of the two environments to redirect traffic to the new version instantly.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Blue/green deployments require that your environment runs independently of your production database if your application uses one. If your environment has an Amazon RDS DB instance attached to it, the data will not transfer over to your second environment and will be lost if you terminate the original environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Hence, the correct answer is to&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">perform a Blue/Green deployment&nbsp;</strong></b><span>to safely upgrade the application’s runtime environment from Java 7 to Java 8.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Update the environment’s platform version to Java 8</strong></b><span>&nbsp;is incorrect because&nbsp;using this method is only recommended when you’re updating to the latest platform version&nbsp;without a change in the runtime environment.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Manually upgrade the Java runtime environment of the EC2 instances in the Elastic Beanstalk environment&nbsp;</strong></b><span>is incorrect. Although this method will work, this entails a lot of configuration to implement compared with just performing a blue/green deployment. In addition, this method may introduce operational risk because the environment may go down while the developer is doing the updates manually.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>The option that says:&nbsp;</span><b><strong class=\"Editor__editor-text-bold___25KrR\">Perform a Traffic splitting deployment&nbsp;</strong></b><span>is incorrect because the scenario requires all user traffic to be immediately directed towards the new version. Take note that in Traffic splitting, updates are released incrementally to a subset of users.</span></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><b><strong class=\"Editor__editor-text-bold___25KrR\">References:</strong></b></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.platform.upgrade.html#using-features.platform.upgrade.bluegreen\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.platform.upgrade.html#using-features.platform.upgrade.bluegreen</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><a href=\"https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html\" target=\"_blank\" class=\"Editor__editor-link___3vl2C\"><span>https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.CNAMESwap.html</span></a></p><p class=\"Editor__editor-paragraph___HPmFS\"><span>&nbsp;</span></p>",
+    "choices": [
+      {
+        "id": 1533761,
+        "value": "Update the environment's platform version to Java 8",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533762,
+        "value": "Perform a Traffic splitting deployment.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533763,
+        "value": "Perform a Blue/Green Deployment",
+        "isCorrect": true,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      },
+      {
+        "id": 1533764,
+        "value": "Manually upgrade the Java runtime environment of the EC2 instances in the Elastic Beanstalk environment.",
+        "isCorrect": false,
+        "isAdvancedEditor": false,
+        "language": "",
+        "responses": []
+      }
+    ],
+    "idx": 25,
+    "type": "SINGLE",
+    "userAnswers": [
+      {
+        "isCorrect": true,
+        "choiceId": 1533763,
+        "questionId": 382506,
+        "response": null,
+        "answerFeedback": null
+      }
+    ],
+    "exact": null,
+    "isFinalScore": false,
+    "media": {
+      "audioUrl": null,
+      "pictureUrl": null,
+      "videoUrl": null
+    },
+    "score": null,
+    "questionId": 382506,
+    "description": "<p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>An application is hosted in Elastic Beanstalk, which is currently running in Java 7 runtime environment. A new version of the application is ready to be deployed, and the developer was tasked to upgrade the platform to Java 8 to accommodate the changes. All user traffic must be immediately directed to the new version. If problems arise, the developer should be able to quickly revert to the previous version.</span></p><p class=\"Editor__editor-paragraph___HPmFS\" dir=\"ltr\"><span>Which of the following is the MOST appropriate action that the developer should do to upgrade the platform?</span></p>",
+    "language": "java",
+    "file": null,
+    "noMatchResponses": [],
+    "answerReview": null,
+    "answerFeedbacks": [],
+    "topic": {
+      "id": 8133,
+      "name": "Deployment (CDA)",
+      "skillId": "",
+      "categoryId": 1618
+    }
+  }
+]
