@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class QuizService {
 
+    public static final int SIZE = 20;
     private final QuestionRepository questionRepository;
 
     public List<Question> getAllQuestions() {
@@ -41,6 +42,6 @@ public class QuizService {
 
     private List<Question> getRamdomQuestions(List<Question> questions) {
         Collections.shuffle(questions);
-        return questions.subList(0, Math.min(questions.size(), 20));
+        return questions.subList(0, Math.min(questions.size(), SIZE));
     }
 }

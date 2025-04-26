@@ -1,8 +1,10 @@
 package org.kras.aws.awsqna.controller;
 
 
+import lombok.RequiredArgsConstructor;
 import org.kras.aws.awsqna.entity.Answer;
 import org.kras.aws.awsqna.entity.Question;
+import org.kras.aws.awsqna.service.AnswerService;
 import org.kras.aws.awsqna.service.QuizService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,15 +15,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Map;
+
+import static java.util.stream.Collectors.toMap;
+import static org.kras.aws.awsqna.service.QuizService.SIZE;
 
 @Controller
+@RequiredArgsConstructor
 public class QuizController {
 
     private final QuizService quizService;
-
-    public QuizController(QuizService quizService) {
-        this.quizService = quizService;
-    }
+    private final AnswerService answerService;
 
     @GetMapping("/")
     public String showQuizPage(Model model) {
@@ -33,28 +37,26 @@ public class QuizController {
     @PostMapping("/submit")
     public String submitAnswers(@RequestParam(value = "answers", required = false) List<Long> selectedAnswerIds, Model model) {
         int correct = 0;
-        List<Question> allQuestions = quizService.getAllQuestions();
-        int incorrect = allQuestions.size();
+        List<Answer> answers = answerService.getAnswers();
+        Map<Long, Boolean> correctAnswerIds = answers.stream()
+                .collect(toMap(Answer::getId, Answer::getIsCorrect));
         if (selectedAnswerIds == null || selectedAnswerIds.isEmpty()) {
-            fillModel(model, correct, incorrect, incorrect);
+            fillModel(model, correct);
         } else {
-            for (Question question : allQuestions) {
-                for (Answer answer : question.getAnswers()) {
-                    if (selectedAnswerIds.contains(answer.getId()) && answer.getIsCorrect()) {
-                        correct++;
-                        incorrect--;
-                    }
+            for (Long answerId : selectedAnswerIds) {
+                if (correctAnswerIds.getOrDefault(answerId, false)) {
+                    correct++;
                 }
             }
         }
-        fillModel(model, correct, incorrect, allQuestions.size());
+        fillModel(model, correct);
         return "result";
     }
 
-    private void fillModel(final Model model, int correct, int incorrect, int allQuestionsSize) {
+    private void fillModel(final Model model, int correct) {
         model.addAttribute("correct", correct);
-        model.addAttribute("incorrect", incorrect);
-        model.addAttribute("grade", String.valueOf(Math.round((double) correct / allQuestionsSize * 100)));
+        model.addAttribute("incorrect", SIZE - correct);
+        model.addAttribute("grade", String.valueOf(Math.round((double) correct / SIZE * 100)));
     }
 
     @GetMapping("/admin")
