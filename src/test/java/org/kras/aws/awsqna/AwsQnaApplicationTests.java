@@ -22,7 +22,6 @@ public class AwsQnaApplicationTests {
             .withDatabaseName("testdb")
             .withUsername("testuser")
             .withPassword("testpassword")
-            .withExposedPorts(3307)
             .withEnv("MYSQL_CHARSET", "utf8mb4")
             .withEnv("MYSQL_COLLATION", "utf8mb4_unicode_ci")
             .withReuse(true);
