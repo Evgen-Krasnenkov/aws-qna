@@ -29,10 +29,10 @@
                 <div th:each="answer : ${question.answers}" class="form-check">
                     <input type="checkbox"
                            class="form-check-input"
-                           th:name="answers"
+                           th:name="'answers[' + ${question.id} + ']'"
                            th:value="${answer.id}"
-                           id="answer-${answer.id}" />
-                    <label class="form-check-label" th:for="|answer-${answer.id}|" th:utext="${answer.answerText}"></label>
+                           th:id="${question.id + '_' + answer.id}">
+                    <label class="form-check-label" th:for="${question.id + '_' + answer.id}" th:utext="${answer.answerText}"></label>
                 </div>
             </td>
         </tr>

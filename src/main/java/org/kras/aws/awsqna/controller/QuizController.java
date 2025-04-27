@@ -2,6 +2,7 @@ package org.kras.aws.awsqna.controller;
 
 
 import lombok.RequiredArgsConstructor;
+import org.kras.aws.awsqna.dto.QuestionAnswersForm;
 import org.kras.aws.awsqna.entity.Answer;
 import org.kras.aws.awsqna.entity.Question;
 import org.kras.aws.awsqna.service.AnswerService;
@@ -12,12 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
 
-import static java.util.stream.Collectors.toMap;
 import static org.kras.aws.awsqna.service.QuizService.SIZE;
 
 @Controller
@@ -35,18 +34,21 @@ public class QuizController {
     }
 
     @PostMapping("/submit")
-    public String submitAnswers(@RequestParam(value = "answers", required = false) List<Long> selectedAnswerIds, Model model) {
+    public String submitAnswers(@ModelAttribute QuestionAnswersForm questionAnswersForm, Model model) {
         int correct = 0;
-        List<Answer> answers = answerService.getAnswers();
-        Map<Long, Boolean> correctAnswerIds = answers.stream()
-                .collect(toMap(Answer::getId, Answer::getIsCorrect));
-        if (selectedAnswerIds == null || selectedAnswerIds.isEmpty()) {
-            fillModel(model, correct);
-        } else {
-            for (Long answerId : selectedAnswerIds) {
-                if (correctAnswerIds.getOrDefault(answerId, false)) {
-                    correct++;
-                }
+        Map<String, List<String>> answers = questionAnswersForm.getAnswers();
+        for (String questionId : answers.keySet()) {
+            List<Long> correctAnswerIds = quizService.getQuestionById(Long.parseLong(questionId))
+                    .getAnswers().stream()
+                    .filter(Answer::getIsCorrect)
+                    .map(Answer::getId)
+                    .toList();
+
+            List<Long> selectedAnswerIds = answers.get(questionId).stream()
+                    .map(Long::parseLong)
+                    .toList();
+            if (correctAnswerIds.equals(selectedAnswerIds)) {
+                correct++;
             }
         }
         fillModel(model, correct);
