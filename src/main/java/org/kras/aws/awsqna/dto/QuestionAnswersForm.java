@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 public class QuestionAnswersForm {
-    private Map<String, List<String>> answers; // Key: Question ID, Value: List of selected answers
+    private Map<String, List<String>> answers;
 
-    // Getters and setters
     public Map<String, List<String>> getAnswers() {
         return answers;
     }

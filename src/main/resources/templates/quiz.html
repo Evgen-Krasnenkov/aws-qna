@@ -17,7 +17,8 @@
         </thead>
         <tbody>
         <tr th:each="question, iterStat : ${questions}">
-            <td th:text="${iterStat.count}"></td>
+            <td th:text="${iterStat.count}" class="fw-bold mb-2"></td>
+            <td th:text = "${question.questionId}"></td>
             <td>
                 <div th:utext="${question.questionText}" class="fw-bold mb-2"></div>
                 <details>

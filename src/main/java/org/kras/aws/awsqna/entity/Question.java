@@ -17,7 +17,7 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private Long questionId;
 
     @Lob
     private String questionText;
@@ -56,5 +56,13 @@ public class Question {
 
     public void setQuestionHint(String questionHint) {
         this.questionHint = questionHint;
+    }
+
+    public Long getQuestionId() {
+        return questionId;
+    }
+
+    public void setQuestionId(Long questionId) {
+        this.questionId = questionId;
     }
 }

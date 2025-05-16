@@ -14,6 +14,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ExamMapper {
     @Mapping(target = "id", ignore = true)
+    @Mapping(target = "questionId", source = "questionId")
     @Mapping(target = "questionText", source = "description")
     @Mapping(target = "answers", source = "choices")
     @Mapping(target = "questionHint", source = "hint")

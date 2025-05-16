@@ -12,6 +12,9 @@ databaseChangeLog:
             tableName: question
             columns:
               - column:
+                  name: question_id
+                  type: BIGINT
+              - column:
                   name: id
                   type: BIGINT
                   autoIncrement: true
