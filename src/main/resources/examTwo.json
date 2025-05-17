@@ -152,7 +152,7 @@
       {
         "id": 1557763,
         "value": "Distribute tasks evenly across Availability Zones, and then re-distribute the tasks among EC2 instances based on the least available amount of CPU/memory within each Availability Zone.",
-        "isCorrect": true,
+        "isCorrect": false,
         "isAdvancedEditor": false,
         "language": "",
         "responses": []
@@ -168,7 +168,7 @@
       {
         "id": 1557765,
         "value": "Distribute tasks among all registered EC2 instances based on the least available amount of CPU or memory using the binpack task placement strategy.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isAdvancedEditor": false,
         "language": "",
         "responses": []
