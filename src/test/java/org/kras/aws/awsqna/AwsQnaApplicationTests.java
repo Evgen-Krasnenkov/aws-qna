@@ -2,7 +2,7 @@ package org.kras.aws.awsqna;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
-import org.kras.aws.awsqna.service.CsvService;
+import org.kras.aws.awsqna.service.QuestionService;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
@@ -30,9 +30,8 @@ public class AwsQnaApplicationTests {
     static {
         mySQLContainer.start();
     }
-
     @MockitoBean
-    CsvService csvService;
+    QuestionService questionService;
 
     @DynamicPropertySource
     static void registerMySQLProperties(DynamicPropertyRegistry registry) {
@@ -48,7 +47,7 @@ public class AwsQnaApplicationTests {
 
     @Test
     void contextLoads() {
-        Mockito.doNothing().when(csvService).loadCsvFromResources();
+        Mockito.doNothing().when(questionService).persistsQuestion(Mockito.any());
     }
 
 }

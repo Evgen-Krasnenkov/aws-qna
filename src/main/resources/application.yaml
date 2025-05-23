@@ -35,3 +35,9 @@ questions:
     - examThree.json
     - security.json
     - troubleshooting.json
+    - itExpert.json
+
+
+logging:
+  hibernate:
+    level: debug
