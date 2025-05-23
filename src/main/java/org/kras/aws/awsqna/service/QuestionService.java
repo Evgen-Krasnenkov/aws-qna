@@ -6,6 +6,7 @@ import org.kras.aws.awsqna.entity.Question;
 import org.kras.aws.awsqna.repo.QuestionRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,5 +17,9 @@ public class QuestionService {
 
     public Optional<Question> persistsQuestion(Question question) {
         return Optional.of(questionRepository.save(question));
+    }
+
+    public List<Question> persistAll(List<Question> questions) {
+        return questionRepository.saveAll(questions);
     }
 }

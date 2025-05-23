@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.kras.aws.awsqna.config.QuestionsProperties;
 import org.kras.aws.awsqna.dto.ExamQuestionDto;
+import org.kras.aws.awsqna.entity.Question;
 import org.kras.aws.awsqna.mapper.ExamMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Component
@@ -30,7 +32,8 @@ public class ExamParserService {
         for (String fileName : questionsProperties.getList()) {
             InputStream inputStream = getResource(fileName);
             List<ExamQuestionDto> examQuestionDtos = mapper.readValue(inputStream, new TypeReference<>() {});
-            persistsQuestion(examQuestionDtos.parallelStream());
+            List<Question> questions = mapToQuestion(examQuestionDtos.parallelStream());
+            List<Question> savedQuestions = questionService.persistAll(questions);
         }
     }
 
@@ -45,9 +48,9 @@ public class ExamParserService {
         return inputStream;
     }
 
-    private void persistsQuestion(Stream<ExamQuestionDto> stream) {
-        stream
+    private List<Question> mapToQuestion(Stream<ExamQuestionDto> stream) {
+        return stream
                 .map(examMapper::mapQuestion)
-                .forEach(questionService::persistsQuestion);
+                .collect(Collectors.toList());
     }
 }
