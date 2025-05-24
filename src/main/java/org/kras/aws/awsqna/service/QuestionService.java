@@ -1,5 +1,6 @@
 package org.kras.aws.awsqna.service;
 
+import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.kras.aws.awsqna.entity.Question;
@@ -15,11 +16,21 @@ import java.util.Optional;
 public class QuestionService {
     private final QuestionRepository questionRepository;
 
+    @PreDestroy
+    public void cleanUp() {
+        log.info("Cleaning up resources...");
+        questionRepository.deleteAll();
+    }
+
     public Optional<Question> persistsQuestion(Question question) {
         return Optional.of(questionRepository.save(question));
     }
 
     public List<Question> persistAll(List<Question> questions) {
         return questionRepository.saveAll(questions);
+    }
+
+    public Optional<Question> findById(Long id) {
+        return questionRepository.findById(id);
     }
 }

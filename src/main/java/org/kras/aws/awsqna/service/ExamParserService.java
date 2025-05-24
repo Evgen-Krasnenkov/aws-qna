@@ -3,18 +3,24 @@ package org.kras.aws.awsqna.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.FlushModeType;
+import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.kras.aws.awsqna.config.QuestionsProperties;
 import org.kras.aws.awsqna.dto.ExamQuestionDto;
+import org.kras.aws.awsqna.entity.Answer;
 import org.kras.aws.awsqna.entity.Question;
 import org.kras.aws.awsqna.mapper.ExamMapper;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,9 +37,24 @@ public class ExamParserService {
     public void parseExamFile() throws IOException {
         for (String fileName : questionsProperties.getList()) {
             InputStream inputStream = getResource(fileName);
-            List<ExamQuestionDto> examQuestionDtos = mapper.readValue(inputStream, new TypeReference<>() {});
-            List<Question> questions = mapToQuestion(examQuestionDtos.parallelStream());
-            List<Question> savedQuestions = questionService.persistAll(questions);
+            if (!fileName.equalsIgnoreCase("itExpert.json")) {
+                List<ExamQuestionDto> examQuestionDtos = mapper.readValue(inputStream, new TypeReference<>() {});
+                List<Question> questions = mapToQuestion(examQuestionDtos.parallelStream());
+                List<Question> savedQuestions = questionService.persistAll(questions);
+            } else {
+                List<Question> questions = mapper.readValue(inputStream, new TypeReference<>() {});
+                questions.forEach(question -> {
+                    question.setId(null);
+                    if(question.getQuestionHint() == null ) {
+                        question.setQuestionHint("");
+                    }
+                    for (Answer answer : question.getAnswers()) {
+                        answer.setId(null);
+                        answer.setQuestion(question);
+                    }
+                });
+                questionService.persistAll(questions);
+            }
         }
     }
 
