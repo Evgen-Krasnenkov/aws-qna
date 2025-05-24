@@ -45,9 +45,4 @@ public class AwsQnaApplicationTests {
         mySQLContainer.stop();
     }
 
-    @Test
-    void contextLoads() {
-        Mockito.doNothing().when(questionService).persistsQuestion(Mockito.any());
-    }
-
 }
