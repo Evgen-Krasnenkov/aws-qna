@@ -15,6 +15,25 @@
 <div class="alert alert-danger">
     Grade: <span th:text="${grade}"></span> %
 </div>
+
+<div class="mt-5">
+    <h2>Question Details</h2>
+    <div th:each="qResult : ${questionResults}" class="mb-4 p-3 border rounded">
+        <h5 th:text="${qResult.questionText}"></h5>
+        <ul class="list-group mt-3">
+            <li th:each="ans : ${qResult.answers}" class="list-group-item d-flex align-items-center">
+                <span th:text="${ans.text}"></span>
+                <!-- Correct badge -->
+                <span th:if="${ans.correct}" class="badge bg-success ms-2">Correct</span>
+                <!-- User-selected, correct -->
+                <span th:if="${ans.selectedByUser} and ${ans.correct}" class="badge bg-primary ms-2">Your answer</span>
+                <!-- User-selected, incorrect -->
+                <span th:if="${ans.selectedByUser} and !${ans.correct}" class="badge bg-danger ms-2">Your answer (Incorrect)</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <a href="/" class="btn btn-primary">Take Quiz Again</a>
 </body>
 </html>
