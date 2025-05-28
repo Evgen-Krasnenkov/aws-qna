@@ -7,6 +7,8 @@ import org.kras.aws.awsqna.entity.Answer;
 import org.kras.aws.awsqna.entity.Question;
 import org.kras.aws.awsqna.service.AnswerService;
 import org.kras.aws.awsqna.service.QuizService;
+import org.kras.aws.awsqna.dto.QuestionResultDto;
+import org.kras.aws.awsqna.dto.QuestionResultDto.AnswerResultDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,9 +39,11 @@ public class QuizController {
     public String submitAnswers(@ModelAttribute QuestionAnswersForm questionAnswersForm, Model model) {
         int correct = 0;
         Map<String, List<String>> answers = questionAnswersForm.getAnswers();
+        List<QuestionResultDto> questionResults = new java.util.ArrayList<>();
+
         for (String questionId : answers.keySet()) {
-            List<Long> correctAnswerIds = quizService.getQuestionById(Long.parseLong(questionId))
-                    .getAnswers().stream()
+            Question question = quizService.getQuestionById(Long.parseLong(questionId));
+            List<Long> correctAnswerIds = question.getAnswers().stream()
                     .filter(Answer::getIsCorrect)
                     .map(Answer::getId)
                     .toList();
@@ -50,8 +54,27 @@ public class QuizController {
             if (correctAnswerIds.equals(selectedAnswerIds)) {
                 correct++;
             }
+            // Build result DTO for this question
+            List<AnswerResultDto> answerResultDtos = new java.util.ArrayList<>();
+            for (Answer a : question.getAnswers()) {
+                boolean selected = selectedAnswerIds.contains(a.getId());
+                boolean isCorrect = a.getIsCorrect();
+                answerResultDtos.add(new AnswerResultDto(
+                        a.getId(),
+                        a.getText(),
+                        selected,
+                        isCorrect
+                ));
+            }
+            questionResults.add(new QuestionResultDto(
+                    question.getId(),
+                    question.getText(),
+                    answerResultDtos,
+                    selectedAnswerIds
+            ));
         }
         fillModel(model, correct);
+        model.addAttribute("questionResults", questionResults);
         return "result";
     }
 
