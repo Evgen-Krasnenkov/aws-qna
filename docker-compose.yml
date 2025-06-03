@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: bitnami/mysql:latest
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: quizdb
+      MYSQL_USER: quizuser
+      MYSQL_PASSWORD: quizpassword
+    ports:
+      - "3306:3306"
+
+#  springboot-app:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    image: quizapp:latest
+#    container_name: springboot-container
+#    restart: always
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/quizdb
+#      SPRING_DATASOURCE_USERNAME: quizuser
+#      SPRING_DATASOURCE_PASSWORD: quizpassword
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - mysql

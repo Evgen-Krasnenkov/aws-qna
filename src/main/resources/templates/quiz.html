@@ -28,7 +28,7 @@
             </td>
             <td>
                 <div th:each="answer : ${question.answers}" class="form-check">
-                    <input type="checkbox"
+                    <input th:attr="type=${question.type == 'MULTIPLE' ? 'checkbox' : 'radio'}"
                            class="form-check-input"
                            th:name="'answers[' + ${question.id} + ']'"
                            th:value="${answer.id}"

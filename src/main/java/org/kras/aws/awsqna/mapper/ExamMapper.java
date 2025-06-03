@@ -18,6 +18,7 @@ public interface ExamMapper {
     @Mapping(target = "questionText", source = "description")
     @Mapping(target = "answers", source = "choices")
     @Mapping(target = "questionHint", source = "hint")
+    @Mapping(target = "type", source = "type")
     Question mapQuestion(ExamQuestionDto dto);
 
     @Mapping(target = "id", ignore = true)

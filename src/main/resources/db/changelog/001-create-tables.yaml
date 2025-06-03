@@ -12,6 +12,9 @@ databaseChangeLog:
             tableName: question
             columns:
               - column:
+                  name: type
+                  type: VARCHAR(50)
+              - column:
                   name: question_id
                   type: BIGINT
               - column:

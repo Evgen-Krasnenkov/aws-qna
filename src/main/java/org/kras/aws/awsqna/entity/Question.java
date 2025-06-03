@@ -18,6 +18,7 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long questionId;
+    private String type;
 
     @Lob
     private String questionText;
@@ -64,5 +65,13 @@ public class Question {
 
     public void setQuestionId(Long questionId) {
         this.questionId = questionId;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 }
